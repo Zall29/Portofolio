@@ -3,8 +3,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/style/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 </head>
 <body>
-    <h1>HAi</h1>
+<nav class="navbar navbar-expand-lg m-3">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav m-auto">
+        <li class="nav-item">
+          <a class="nav-link " href="#profil">Profil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#skill">Skill</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projek">Project</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- PROFIL -->
+ <section class="profil p-4" id="profil">
+    <div class="d-flex flex-column flex-md-row gap-5 align-items-center" id="profil-konten">
+        <div class="" id="img-profil">
+            <img src="/Image/ChatGPT Image 28 Mar 2025, 20.46.16.png" alt="">
+        </div>
+        <div class="" id="detail-profil" >
+            <h1>Hi, I'm Zal Abdan Hayun</h1>
+            <p>I am a web developer with a passion for creating beautiful and functional websites.
+            I have experience in HTML, CSS, and JavaScript, and I am always eager to learn new technologies.</p>
+            <div class="download">
+              <a href="http://">Download</a>
+            </div>
+        </div>
+    </div>
+ </section>
+<!-- PROFIL -->
+
+<!-- ABOUT -->
+ <section class="about p-4" id="about">
+  <div class="" id="about-konten">
+    <h1 class="text-center pb-4">About Me</h1>
+    <p>I am a web developer with a passion for creating beautiful and functional websites. I have experience in HTML, CSS, and JavaScript, and I am always eager to learn new technologies. In my free time, I enjoy exploring new frameworks and libraries to enhance my skills. <br>My goal is to build responsive and user-friendly web applications that provide an excellent user experience. I believe in writing clean and maintainable code, and I am always looking for ways to improve my development process.</p>
+  </div>
+ </section>
+<!-- ABOUT -->
+
+<!-- SKILL -->
+<section class="skill p-4" id="skill">
+  <div class="skill-konten">
+    <h1 class="text-center pb-4">Skill</h1>
+    <div class="container">
+      <div class="row row-cols-2 row-cols-md-4 g-4 justify-content-center" id="list-skill">
+
+        <div class="col text-center position-relative">
+          <div class="skill-item">
+            <img src="/Image/Skill/HTML.png" alt="HTML" width="150px">
+          </div>
+          <div class="head-skill">
+            <h6 class="mt-4">HTML</h6>
+          </div>
+        </div>
+
+        <div class="col text-center position-relative">
+          <div class="skill-item">
+            <img src="/Image/Skill/CSS.png" alt="CSS" width="150px">
+          </div>
+          <div class="head-skill">
+            <h6 class="mt-4">CSS</h6>
+          </div>
+        </div>
+
+        <div class="col text-center position-relative">
+          <div class="skill-item">
+            <img src="/Image/Skill/JS.png" alt="JavaScript" width="150px">
+          </div>
+          <div class="head-skill">
+            <h6 class="mt-4">JavaScript</h6>
+          </div>
+        </div>
+
+        <div class="col text-center position-relative">
+          <div class="skill-item">
+            <img src="/Image/Skill/laravel.png" alt="Laravel" width="164px">
+          </div>
+          <div class="head-skill">
+            <h6 class="mt-4">Laravel</h6>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- SKILL -->
+
+<!-- PROJEK -->
+ <section class="projek pt-5 pb-5">
+  <h1 class="text-center pb-4">Projek</h1>
+  <div class="d-flex justify-content-center gap-3" id="projek-konten">
+    <div class="list-projek" id="projek-1">
+      <div class="projek-item" id="projek-item">
+        <img src="/Image/Projek/YPLP.jpeg" alt="" width="300px">
+      </div>
+      <div class="detail-projek pt-2 p-3 mb-2">
+        <h5>YPLP CONNECT</h5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut rerum, velit, tenetur similique aliquam deleniti commodi iusto veniam impedit maiores soluta obcaecati corrupti reprehenderit dicta, sunt unde. Voluptas, cumque ab!</p>
+        <button type="button" class="btn btn-primary">Primary</button>
+      </div>
+    </div>
+
+    <div class="list-projek" id="projek-2">
+      <div class="projek-item" id="projek-item">
+        <img src="/Image/Projek/Ruang Pinjam.jpeg" alt="" width="300px">
+      </div>
+      <div class="detail-projek pt-2 p-3 mb-2">
+        <h5>RUANG PINJAM</h5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut rerum, velit, tenetur similique aliquam deleniti commodi iusto veniam impedit maiores soluta obcaecati corrupti reprehenderit dicta, sunt unde. Voluptas, cumque ab!</p>
+        <button type="button" class="btn btn-primary">Primary</button>
+      </div>
+    </div>
+  </div>
+ </section>
+<!-- PROJEK -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous"></script>
 </body>
 </html>
