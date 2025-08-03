@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sriracha&family=Trade+Winds&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Righteous&family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Merienda:wght@300..900&family=Righteous&family=Sriracha&display=swap');
+
+
 body{
     background-color: #090040 !important;
     color: white !important;
@@ -10,6 +16,7 @@ body{
 
 .nav-item .nav-link{
     color:white;
+    font-family: Bree Serif;
 }
 
 .nav-item .nav-link:hover{
@@ -17,6 +24,11 @@ body{
 }
 
 /* CSS PROFIL */
+/* .profil{
+  height: 70vh;
+  margin-top: 15vh;
+} */
+
 #img-profil img{
     object-fit: cover;
     width: 300px;
@@ -24,8 +36,13 @@ body{
     border-radius: 50%;
 }
 
+#detail-profil h1{
+  font-family: Righteous;
+}
+
 #detail-profil p{
     text-align: justify;
+    font-family: merienda;
 }
 
 .download{
@@ -42,16 +59,27 @@ body{
 .download a{
     text-decoration: none;
     color: black;
+    font-family: merienda;
+    font-size: 15px;
 }
 /* CSS PROFIL */
 
 /* ABOUT */
 #about-konten p{
     text-align: justify;
+    font-family: merienda;
+}
+
+#about-konten h1{
+  font-family: Sriracha;
 }
 /* ABOUT */
 
 /* CSS SKILL */
+.skill-konten h1{
+  font-family: Sriracha;
+}
+
 /* Parent harus relative agar absolute anak bisa ditempatkan */
 .col.position-relative {
   position: relative;
@@ -125,19 +153,21 @@ body{
 }
 /* CSS SKILL */
 
-/* CSS PROJEK */ 
+/* CSS PROJEK */
+.projek h1{
+  font-family: Sriracha;
+}
+
+#projek-konten {
+  width: 100%;
+  flex-wrap: wrap;
+}
+
 .list-projek {
     width: 300px;
     background-color:#007F73;
     border-radius: 20px;
     border: white solid 1px;
-    overflow: hidden;
-    height: 320px;
-}
-
-.projek-item {
-    display: flex;
-    justify-content: center;
 }
 
 .projek-item img {
@@ -147,13 +177,30 @@ body{
     display: block;
 }
 
-.detail-projek p{
-  display: -webkit-box;
-  -webkit-line-clamp: 3; /* ubah ke 2 jika mau maksimal 2 baris */
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.accordion{
+  margin-top: 20px;
+  margin-bottom: 0%;
+}
+
+/* Ubah warna background tombol accordion (saat tertutup) */
+.accordion-button {
+  background-color: #007F73 !important; /* warna bebas */
+  color: white !important;
+  padding: 0% !important;
+  padding-bottom: 10px !important;
+  border: none;
+}
+
+/* Ubah warna background isi deskripsi */
+.accordion-body {
+  background-color: #007F73;
+  color: white;
   text-align: justify;
+  padding: 0% !important;
+}
+
+.accordion-button::after {
+  filter: brightness(0) invert(1);
 }
 
 
