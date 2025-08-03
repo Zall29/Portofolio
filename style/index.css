@@ -24,10 +24,12 @@ body{
 }
 
 /* CSS PROFIL */
-/* .profil{
-  height: 70vh;
-  margin-top: 15vh;
-} */
+@media (min-width: 1024px){
+  #profil{
+    height: 70vh;
+    margin-top: 15vh;
+  }
+}
 
 #img-profil img{
     object-fit: cover;
@@ -36,31 +38,88 @@ body{
     border-radius: 50%;
 }
 
-#detail-profil h1{
+#detail-profil h1 {
   font-family: Righteous;
+  font-size: 60px;
+  background: linear-gradient(270deg, #00ffe0, #6a5acd, #00ff6a, #ffcc00);
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 20s ease infinite;
 }
 
-#detail-profil p{
-    text-align: justify;
-    font-family: merienda;
+@media (max-width: 768px) {
+#detail-profil h1 {
+    font-size: 30px; /* ukuran untuk tablet dan mobile */
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#detail-profil p {
+  font-family: 'Merienda';
+  font-size: 20px;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #ffffff;
+  width: 0;
+  animation: typing 6s steps(13, end) forwards, blink 0.7s step-end infinite;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes typing {
+  0% { width: 0 }
+  30% { width: 13ch }
+  70% { width: 13ch }
+  100% { width: 0 }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+.social-media a img{
+  width: 25px;
+  transition: transform 0.3s ease; /* Animasi saat berubah ukuran */
+}
+
+.social-media a img:hover {
+  transform: scale(1.2); /* Membesarkan gambar 1.2x saat hover */
 }
 
 .download{
     background-color: antiquewhite;
-    width: 120px;
+    width: 100px;
     padding: 10px;
     border-radius: 30px;
     display: flex;
     justify-content: center;
     cursor: pointer;
     text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.download:hover{
+  transform: scale(1.1);
 }
 
 .download a{
     text-decoration: none;
     color: black;
     font-family: merienda;
-    font-size: 15px;
+    font-size: 12px;
 }
 /* CSS PROFIL */
 
