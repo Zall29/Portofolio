@@ -5,23 +5,110 @@
 
 
 body{
-    background-color: #090040 !important;
+    background-image: url(/Image/background/coolbackgrounds-particles-compute.png);
     color: white !important;
 }
 
-.navbar{
-    background-color: #007F73;
-    border-radius: 20px;
+/* CSS NAVBar */
+.navbar {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  z-index: 0;
+  overflow: hidden;
 }
 
-.nav-item .nav-link{
-    color:white;
-    font-family: Bree Serif;
+/* Border animasi */
+.navbar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px; /* tebal border */
+  border-radius: 20px;
+  background: linear-gradient(
+    90deg,
+    #ff0080,
+    #7928ca,
+    #2afadf,
+    #00ff88,
+    #ffeb3b,
+    #ff5722,
+    #ff0080
+  );
+  background-size: 300% 300%;
+  animation: borderMove 15s linear infinite;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  z-index: -1;
 }
 
-.nav-item .nav-link:hover{
-    color: yellow;
+@keyframes borderMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
+
+.navbar-nav li a {
+  color: white;
+  display: inline-block; /* supaya scale tidak ganggu layout */
+  transition: transform 0.3s ease, color 0.3s ease;
+  font-family: Righteous;
+}
+
+.navbar-nav li a:hover {
+  color: white; /* tetap putih */
+  transform: scale(1.2); /* zoom sedikit */
+}
+
+.navbar-toggler {
+  border: 1px solid white !important; /* border warna putih */
+  box-shadow: none !important;
+  background: transparent;
+  padding: 7px !important; /* kecilkan padding */
+  width: 30px;  /* ukuran tombol */
+  height: 20px; /* tinggi tombol */
+  display: flex;
+  align-items: center; /* vertikal tengah */
+  justify-content: center; /* horizontal tengah */
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+  background-size: 30px 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* width: 20px;
+  height: 15px; */
+}
+
+/* Collapse (mobile/tablet) */
+@media (max-width: 992px) {
+  .navbar-nav .nav-item {
+    border-radius: 6px;
+    transition: background-color 0.3s ease, padding-left 0.3s ease;
+    
+  }
+
+  .navbar-nav .nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* warna transparan */
+    padding-left: 8px; /* geser sedikit ke kanan saat hover */
+  }
+
+  /* Hilangkan efek zoom */
+  .navbar-nav li a:hover {
+    transform: none;
+  }
+
+  .navbar-nav .nav-link {
+    color: white !important; /* pastikan teks tetap putih */
+    transition: color 0.3s ease;
+  }
+}
+/* CSS NAVBar */
 
 /* CSS PROFIL */
 @media (min-width: 1024px){
@@ -40,18 +127,12 @@ body{
 
 #detail-profil h1 {
   font-family: Righteous;
-  font-size: 60px;
+  font-size: clamp(1.75rem, 6vw, 3.75rem); /* min 28px, ideal 6vw, max 60px */
   background: linear-gradient(270deg, #00ffe0, #6a5acd, #00ff6a, #ffcc00);
   background-size: 600% 600%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradientShift 20s ease infinite;
-}
-
-@media (max-width: 768px) {
-#detail-profil h1 {
-    font-size: 30px; /* ukuran untuk tablet dan mobile */
-  }
 }
 
 @keyframes gradientShift {
@@ -125,8 +206,8 @@ body{
 
 /* ABOUT */
 #about-konten p{
-    text-align: justify;
-    font-family: merienda;
+  text-align: justify;
+  font-family: merienda;
 }
 
 #about-konten h1{
@@ -135,42 +216,20 @@ body{
 /* ABOUT */
 
 /* CSS SKILL */
-.skill-konten h1{
+/* ------------------------------
+   CSS Skill (Desktop)
+--------------------------------*/
+.skill-konten h1 {
   font-family: Sriracha;
 }
 
-/* Parent harus relative agar absolute anak bisa ditempatkan */
-.col.position-relative {
-  position: relative;
+.col {
+ transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* head-skill awal: tersembunyi dan turun ke bawah */
-.head-skill {
-  position: absolute;
-  bottom: 0px;
-  left: 50%;
-  top: 90%;
-  width: 204px;
-  height: 30%;
-   transform: translateX(-50%) translateY(-20px); /* ⬅️ dari atas */
-  z-index: 1;
-  background-color: antiquewhite;
-  padding: 6px 16px;
-  border-radius: 12px;
-  font-weight: bold;
-  color: #333;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;                    /* disembunyikan */
-  transition: all 0.5s ease;     /* animasi smooth */
-  pointer-events: none;          /* supaya gak ganggu hover */
-}
+.col:hover{
+  transform:translateY(-5px) scale(1.03);
 
-/* efek muncul saat hover pada skill-item */
-.skill-item:hover + .head-skill {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0); /* ⬇️ turun ke bawah */
 }
 
 .skill-item {
@@ -186,28 +245,121 @@ body{
 }
 
 .skill-item img {
-    position: relative;
-    z-index: 2;
-    filter:grayscale(100%);
-    transition: all 0.5s ease;
+  position: relative;
+  z-index: 2;
+  filter: grayscale(100%);
+  transition: all 0.5s ease;
 }
 
 .skill-item:hover img {
-    filter: grayscale(0%);
+  filter: grayscale(0%);
 }
 
+.head-skill {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  bottom: 0px;
+  width: 204px;
+  height: 30%;
+  padding: 6px 16px;
+  background-color: antiquewhite;
+  border-radius: 12px;
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateX(-50%) translateY(-20px);
+  transition: all 0.5s ease;
+  pointer-events: none;
+  z-index: 1;
+  font-family: merienda;
+}
+
+.head-skill h6{
+  margin-top: 30px;
+}
+
+/* Efek muncul saat hover */
+.skill-item:hover + .head-skill {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ------------------------------
+   Responsive: Mobile View
+--------------------------------*/
 @media (max-width: 767.98px) {
-  #list-skill {
-    gap: 1.5rem !important; /* jarak antar skill-item */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  /* Swiper Container */
+  .skillSwiper {
+    overflow: hidden;
+    padding-bottom: 45px !important; /* ruang untuk .head-skill agar tidak terpotong */
   }
 
-  .col.position-relative {
+  /* Swiper Slide */
+  .skillSwiper .swiper-slide {
+    width: 60% !important;
+    overflow: visible !important;
     display: flex;
-    flex-direction: column;
+    justify-content: center; /* agar .col di tengah */
+  }
+
+  .skillSwiper .swiper-slide .col {
+    opacity: 0.5;
+    transform: scale(0.92);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    max-width: 100%; /* mencegah "meledak" */
+  }
+
+  .skillSwiper .swiper-slide-active .col {
+    opacity: 1;
+    transform: scale(1.03);
+    z-index: 2;
+  }
+
+  /* Skill Image */
+  .skillSwiper .skill-item {
+    overflow: visible !important;
+  }
+
+  .skillSwiper .swiper-slide .skill-item img {
+    width: 100%;
+    display: block;
+    border-radius: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  }
+
+  /* Sembunyikan list desktop */
+  #list-skill {
+    display: none !important;
+  }
+
+  /* Head Skill Mobile (dengan class .active) */
+  .skillSwiper .head-skill {
+    position: absolute;
+    top: 87%;
+    left: 50%;
+    width: 204px;
+    padding: 6px 16px;
+    background-color: antiquewhite;
+    border-radius: 12px;
+    font-weight: bold;
+    color: #333;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+    transition: all 0.4s ease;
+    pointer-events: none;
+  }
+
+  .skillSwiper .head-skill.active {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto;
   }
 }
 /* CSS SKILL */
@@ -227,13 +379,21 @@ body{
     background-color:#007F73;
     border-radius: 20px;
     border: white solid 1px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.list-projek:hover {
+    transform: translateY(-5px) scale(1.03);
+}
 .projek-item img {
     width: 300px;
     border-radius: 20px 20px 0 0;
     border-bottom: black solid 1px;
     display: block;
+}
+
+.detail-projek h5{
+ font-family: Righteous;
 }
 
 .accordion{
@@ -248,14 +408,16 @@ body{
   padding: 0% !important;
   padding-bottom: 10px !important;
   border: none;
+  font-family: merienda;
 }
 
-/* Ubah warna background isi deskripsi */
 .accordion-body {
   background-color: #007F73;
   color: white;
   text-align: justify;
   padding: 0% !important;
+  font-family: merienda;
+  font-size: 0.7rem;
 }
 
 .accordion-button::after {
@@ -263,5 +425,36 @@ body{
 }
 
 
+/* 📱 CSS PROJEK - Mobile View */
+@media (max-width: 767.98px) {
+  .mySwiper.projekSwiper {
+    padding-bottom: 20px;
+    margin: 0 auto; /* ✅ tengah */
+    width: 100%;
+    max-width: 100vw; /* jaga agar tidak melebar */
+  }
 
+  .mySwiper.projekSwiper .swiper-slide {
+    width: 75% !important;
+    background-color: #007F73;
+    border-radius: 20px;
+    border: 1px solid white;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    opacity: 0.5;
+    transform: scale(0.90);
+  }
+
+  .mySwiper.projekSwiper .swiper-slide-active {
+    opacity: 1;
+    transform: scale(1.03);
+    z-index: 2;
+  }
+
+  .projek-item img {
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+}
 /* CSS PROJEK */ 
+ 

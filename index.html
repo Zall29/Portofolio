@@ -1,48 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portofolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sriracha&family=Trade+Winds&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style/index.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sriracha&family=Trade+Winds&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style/index.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
 
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg m-3">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav m-auto d-flex gap-4">
-          <li class="nav-item"><a class="nav-link" href="#profil">Profil</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skill">Skill</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projek">Project</a></li>
-        </ul>
-      </div>
+<nav class="navbar navbar-expand-lg m-3 navbar-animated-border">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav m-auto d-flex gap-4">
+        <li class="nav-item"><a class="nav-link" href="#profil">Profil</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skill">Skill</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projek">Project</a></li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
+
+
 
   <!-- PROFIL -->
   <section class="profil p-4" id="profil">
     <div class="d-flex flex-column flex-md-row gap-5 align-items-center" id="profil-konten">
       <div id="img-profil">
-        <img src="Image/20230320_101212.jpg" alt="">
+        <img src="Image/20230320_101212.jpg" alt="" />
       </div>
       <div id="detail-profil">
         <h1 class="display-4 display-md-2 display-lg-1">Hi, I'm Zal Abdan Hayun</h1>
         <p>Web Developer</p>
         <div class="social-media d-flex gap-3 mb-4">
-          <a href="https://wa.me/qr/I2SFUKQ2LIASF1"><img src="Image/icon profil/social.png" alt=""></a>
-          <a href="https://mail.google.com/mail/?view=cm&to=zalabdan029@gmail.com"><img src="Image/icon profil/gmail.png" alt=""></a>
-          <a href="https://github.com/Zall29"><img src="Image/icon profil/github.png" alt="" style="filter: invert(1);"></a>
+          <a href="https://wa.me/qr/I2SFUKQ2LIASF1"><img src="Image/icon profil/social.png" alt="" /></a>
+          <a href="https://mail.google.com/mail/?view=cm&to=zalabdan029@gmail.com"><img src="Image/icon profil/gmail.png" alt="" /></a>
+          <a href="https://github.com/Zall29"><img src="Image/icon profil/github.png" alt="" style="filter: invert(1);" /></a>
         </div>
         <div class="download">
           <a href="CV/CV_Zal Abdan Hayun.pdf">Download CV</a>
@@ -68,54 +71,100 @@
       <h1 class="text-center pb-4">Skill</h1>
       <div class="container">
         <div class="row row-cols-2 row-cols-md-4 g-4 justify-content-center" id="list-skill">
-
+          <!-- Skill Items -->
           <div class="col text-center position-relative">
             <div class="skill-item">
-              <img src="Image/Skill/HTML.png" alt="HTML" width="150px">
+              <img src="Image/Skill/HTML.png" alt="HTML" width="150px" />
+            </div>
+            <div class="head-skill">
+              <h6 class="">HTML</h6>
+            </div>
+          </div>
+          <div class="col text-center position-relative">
+            <div class="skill-item">
+              <img src="Image/Skill/CSS.png" alt="CSS" width="150px" />
+            </div>
+            <div class="head-skill">
+              <h6 class="">CSS</h6>
+            </div>
+          </div>
+          <div class="col text-center position-relative">
+            <div class="skill-item">
+              <img src="Image/Skill/JS.png" alt="JavaScript" width="150px" />
+            </div>
+            <div class="head-skill">
+              <h6 class="">JavaScript</h6>
+            </div>
+          </div>
+          <div class="col text-center position-relative">
+            <div class="skill-item">
+              <img src="Image/Skill/laravel.png" alt="Laravel" width="164px" />
+            </div>
+            <div class="head-skill">
+              <h6 class="">Laravel</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 📱 Mobile (Swiper) -->
+    <div class="swiper skillSwiper d-md-none">
+      <div class="swiper-wrapper mt-2">
+        <!-- Swiper Slides -->
+        <div class="swiper-slide">
+          <div class="col text-center position-relative">
+            <div class="skill-item">
+              <img src="Image/Skill/HTML.png" alt="HTML" />
             </div>
             <div class="head-skill">
               <h6 class="mt-4">HTML</h6>
             </div>
           </div>
+        </div>
 
+        <div class="swiper-slide">
           <div class="col text-center position-relative">
             <div class="skill-item">
-              <img src="Image/Skill/CSS.png" alt="CSS" width="150px">
+              <img src="Image/Skill/CSS.png" alt="CSS" />
             </div>
             <div class="head-skill">
               <h6 class="mt-4">CSS</h6>
             </div>
           </div>
+        </div>
 
+        <div class="swiper-slide">
           <div class="col text-center position-relative">
             <div class="skill-item">
-              <img src="Image/Skill/JS.png" alt="JavaScript" width="150px">
+              <img src="Image/Skill/JS.png" alt="JavaScript" />
             </div>
             <div class="head-skill">
               <h6 class="mt-4">JavaScript</h6>
             </div>
           </div>
+        </div>
 
+        <div class="swiper-slide">
           <div class="col text-center position-relative">
-            <div class="skill-item">
-              <img src="Image/Skill/laravel.png" alt="Laravel" width="164px">
+            <div class="skill-item laravel">
+              <img src="Image/Skill/laravel.png" alt="Laravel" class="imglaravel" />
             </div>
             <div class="head-skill">
               <h6 class="mt-4">Laravel</h6>
             </div>
           </div>
-
         </div>
       </div>
     </div>
   </section>
 
   <!-- PROJEK -->
-  <section class="projek pt-5 pb-5">
+  <section class="projek pt-3 pb-5 p-4" id="projek">
     <h1 class="text-center pb-4">Projek</h1>
-
-    <div class="d-flex justify-content-center align-items-start gap-5" id="projek-konten">
-
+    <!-- 🖥️ Desktop -->
+    <div class="d-flex justify-content-center align-items-start gap-5 flex-wrap d-none d-md-flex" id="projek-konten">
+      <!-- List Projek -->
       <!-- Projek 1 -->
       <div class="list-projek">
         <div class="projek-item">
@@ -131,7 +180,7 @@
                   Lihat Deskripsi
                 </button>
               </h2>
-              <div id="collapseYPLP" class="accordion-collapse collapse" aria-labelledby="headingYPLP">
+              <div id="collapseYPLP" class="accordion-collapse collapse" aria-labelledby="headingYPLP"  data-bs-parent="#accordionYPLP">
                 <div class="accordion-body">
                   YPLP Connect adalah sistem berbasis website yang dirancang untuk membantu proses administrasi antara yayasan dan sekolah.
                   Fitur utamanya mencakup manajemen keuangan, pengelolaan data siswa dan guru, serta pelaporan dan komunikasi yang terintegrasi
@@ -195,11 +244,83 @@
           </div>
         </div>
       </div>
+    </div>
 
+    <!-- 📱 Mobile Swiper -->
+    <div class="swiper mySwiper projekSwiper d-md-none">
+      <div class="swiper-wrapper mt-2">
+        <!-- Slide 1 -->
+        <div class="swiper-slide" >
+          <div class="projek-item"><img src="Image/Projek/YPLP.jpeg" alt="" /></div>
+          <div class="detail-projek pt-2 p-3">
+            <h5>YPLP Connect</h5>
+            <div class="accordion accordion-flush" id="accordionYPLPMobile">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingYPLPMobile">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseYPLPMobile" aria-expanded="false" aria-controls="collapseYPLPMobile">Lihat Deskripsi</button>
+                </h2>
+                <div id="collapseYPLPMobile" class="accordion-collapse collapse" aria-labelledby="headingYPLPMobile">
+                  <div class="accordion-body">
+                    Sistem administrasi yayasan dan sekolah: keuangan, siswa/guru, pelaporan.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="projek-item"><img src="Image/Projek/Ruang Pinjam.jpeg" alt="" /></div>
+          <div class="detail-projek pt-2 p-3">
+            <h5>RUANG PINJAM</h5>
+            <div class="accordion accordion-flush" id="accordionRuangPinjamMobile">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingRuangPinjamMobile">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRuangPinjamMobile" aria-expanded="false" aria-controls="collapseRuangPinjamMobile">Lihat Deskripsi</button>
+                </h2>
+                <div id="collapseRuangPinjamMobile" class="accordion-collapse collapse" aria-labelledby="headingRuangPinjamMobile">
+                  <div class="accordion-body">
+                    Sistem peminjaman digital: permintaan, status, dan pengembalian.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="projek-item"><img src="Image/Projek/berita.jpeg" alt="" /></div>
+          <div class="detail-projek pt-2 p-3">
+            <h5>BERITA TERKINI</h5>
+            <div class="accordion accordion-flush" id="accordionBeritaMobile">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingBeritaMobile">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBeritaMobile" aria-expanded="false" aria-controls="collapseBeritaMobile">Lihat Deskripsi</button>
+                </h2>
+                <div id="collapseBeritaMobile" class="accordion-collapse collapse" aria-labelledby="headingBeritaMobile">
+                  <div class="accordion-body">
+                    Website berita dengan API Laravel Blade: headline, populer, dan rekomendasi.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous"></script>
+  
+  <script src="JS/swipper-projek.js"></script>
+  <script src="JS/Toggler.js"></script>
+  <script src="JS/swipper-skill.js"></script>
+  <script src="JS/close-accordion.js"></script>
 </body>
 </html>
