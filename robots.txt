@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://zall29.github.io/Portofolio/sitemap.xml
